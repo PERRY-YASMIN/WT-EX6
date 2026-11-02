@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPulse — Task Tracker (Exp 6)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- TechPulse Header / Branding -->
+        <header class="header">
+            <h1>TechPulse</h1>
+            <p>Task Tracker &mdash; JavaScript Functions Lab</p>
+        </header>
+
+        <!-- Main Task Tracker Card -->
+        <main class="card">
+            <h2>Task Tracker</h2>
+            <p class="desc">Organize and manage your technology tasks efficiently.</p>
+
+            <!-- Task Input Form -->
+            <form id="taskForm" class="task-form">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="What needs to be done?" 
+                    autocomplete="off"
+                    aria-label="New task input"
+                >
+                <button type="submit" id="addBtn" class="btn-add">Add Task</button>
+            </form>
+
+            <!-- Toolbar: Filters and Open Tasks Counter -->
+            <div class="toolbar">
+                <div class="filter-group" role="group" aria-label="Task status filters">
+                    <button type="button" class="filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="filter-btn" data-filter="open">Open</button>
+                    <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <span class="task-counter" id="taskCounter">0 tasks left</span>
+            </div>
+
+            <!-- Task Items List -->
+            <ul id="taskList" class="task-list" aria-live="polite"></ul>
+
+            <!-- Empty State Notice -->
+            <p id="emptyState" class="empty-state">No tasks to display.</p>
+        </main>
+    </div>
+
+    <!-- External JavaScript File -->
+    <script src="app.js"></script>
+
+</body>
+</html>
